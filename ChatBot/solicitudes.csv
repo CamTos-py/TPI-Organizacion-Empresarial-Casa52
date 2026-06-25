@@ -1,0 +1,4 @@
+id_solicitud,id_empleado,tipo,detalle,estado
+1,2,Cambio de turno,Martes Tarde,Pendiente
+2,6,Día libre,15/07/2026,Aprobada
+3,9,Cambio de turno,Sábado Noche,Rechazada
