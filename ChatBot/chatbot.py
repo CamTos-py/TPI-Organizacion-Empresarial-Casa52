@@ -1,10 +1,11 @@
-import csv
+import csv  #Se importa el modulo csv
 
+#Declaración de constantes para referirse a los archivos .csv (mejor y más fácil mantenimiento del código)
 ARCHIVO_EMPLEADOS = "empleados.csv"
 ARCHIVO_TURNOS = "turnos.csv"
 ARCHIVO_SOLICITUDES = "solicitudes.csv"
 
-
+#Definición de funciones para lector de csv, validación de ID y opciones de menú
 def cargar_empleados():
     empleados = {}
 
@@ -108,6 +109,8 @@ def pedir_dia_libre(id_empleado, empleados):
             fecha
         )
 
+        empleados[id_empleado]["dias_libres"] -= 1
+
         print("Solicitud registrada correctamente.")
 
     else:
@@ -125,6 +128,7 @@ id_empleado = validar_id(empleados)
 
 print(f"\nBienvenido/a {empleados[id_empleado]['nombre']}")
 
+#Menú principal de opciones
 while True:
 
     print("\nMENÚ")
